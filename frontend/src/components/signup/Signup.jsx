@@ -19,7 +19,7 @@ const Signup = () => {
     const history = useHistory();
     const userm = useSelector(state => state.user)
     useEffect(() => {
-        if(userm.userinfo && userm.userinfo._id){
+        if(userm.userinfo && userm.userinfo.data){
             history.push("/");
         }
     }, [history, userm]);
