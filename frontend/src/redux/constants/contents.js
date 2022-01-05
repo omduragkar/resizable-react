@@ -1,0 +1,3 @@
+export const ANCR ="ADD_NEW_CONTENT_REQUEST";
+export const ANCS ="ADD_NEW_CONTENT_SUCCESS";
+export const ANCF ="ADD_NEW_CONTENT_FAIL";

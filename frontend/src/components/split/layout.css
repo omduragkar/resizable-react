@@ -1,0 +1,36 @@
+.splitmain{
+    height: 100vh;
+}
+
+.splitupper{
+    display:flex;
+}
+
+.btn-upper1{
+    padding: 1%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+.upperdiv2h{
+    text-align: center;
+    font-size: xx-large;
+    margin: 1%;
+}
+
+.tabledown{
+    padding: 5%;
+}
