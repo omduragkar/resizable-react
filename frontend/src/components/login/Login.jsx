@@ -21,7 +21,7 @@ const Login = () => {
         dispatch(userLogin(user));
     }
     useEffect(() => {
-        if(userm.userinfo && userm.userinfo.data){
+        if(userm.userinfo){
             history.push("/");
         }
     }, [history, userm]);
