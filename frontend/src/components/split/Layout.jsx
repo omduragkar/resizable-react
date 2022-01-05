@@ -38,13 +38,13 @@ const Layout = () => {
                 <div style={{"backgroundColor":"#a2a2a2"}}>
                     <h1>Welcome</h1>
                     <h2>Total Hits: </h2>
-                    <p>CREATE: {user.counter?user.counter.create:<></>}</p>
-                    <p>UPDATE: {user.counter?user.counter.update:<></>}</p>
+                    <p>CREATE: {user.counter?user.counter.create:"0"}</p>
+                    <p>UPDATE: {user.counter?user.counter.update:"0"}</p>
                     <button onClick={log}>Logout</button>
                 </div>
                 <div style={{"backgroundColor":"#c4c4c4", "overflowY":"scroll", padding:"1%"}}>
                     <h2 className="upperdiv2h">Tables</h2>
-                    <div>
+                    <div className='btn-add'>
                         <button onClick={(e)=>{addtf(e)}}>Add</button>
                         <button onClick={(e)=>{addtf(e)}}>Update</button>
                     </div>

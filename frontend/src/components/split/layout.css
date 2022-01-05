@@ -29,8 +29,16 @@ td, th {
     text-align: center;
     font-size: xx-large;
     margin: 1%;
+    width: 50%;
+    text-align: center;
+    display: inline-block;
 }
+.btn-add{
+    text-align: center;
+    display: inline-block;
+    width: 40%;
 
+}
 .tabledown{
     padding: 5%;
 }
