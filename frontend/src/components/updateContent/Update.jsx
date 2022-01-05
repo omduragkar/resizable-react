@@ -29,16 +29,17 @@ const Update = () => {
             setAddUser([...addUser, addc]);
             setAddc({});
         }
-        else{
-
-        }
     }
     const updateFinal = ()=>{
     
-
-        let finobj = {content:addUser, id:user._id};
-        dispatch(updateContent(finobj));
-        setAddUser([...user.content]);
+        if(addUser.length === 0){
+            alert("add something");
+        }
+        else{
+            let finobj = {content:addUser, id:user._id};
+            dispatch(updateContent(finobj));
+            setAddUser([...user.content]);
+        }
         
 
     }
