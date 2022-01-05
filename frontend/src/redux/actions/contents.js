@@ -13,7 +13,7 @@ export const addnewtocontent = (content) => async (dispatch)=>{
         // console.log(x)
         console.log(content);
         console.log("using axios");
-        const data = await axios.post("http://localhost:5000/api/add",content, config);
+        const data = await axios.post("/api/add",content, config);
         localStorage.setItem("userInfo", JSON.stringify(data));
         dispatch({
             type: ULS,
@@ -44,7 +44,7 @@ export const updateContent = (content) => async (dispatch)=>{
         // console.log(x)
         console.log(content);
         console.log("using axios");
-        const data = await axios.post("http://localhost:5000/api/update",content, config);
+        const data = await axios.post("/api/update",content, config);
         localStorage.setItem("userInfo", JSON.stringify(data));
         dispatch({
             type: ULS,

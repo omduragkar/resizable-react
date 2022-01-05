@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import { useDispatch } from "react-redux";
-import { useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { userLogin } from '../../redux/actions/userActions';
 
 const Login = () => {
@@ -26,13 +26,26 @@ const Login = () => {
         }
     }, [history, userm]);
     return (
-        <div>
-            <h3>Sign in</h3>
-            {userm.loading?<h2>loading</h2>:<></>}
-            {userm.error?<h2>{userm.error}</h2>:<></>}
-            <input type="text" name="email" value={user.email || ""} onChange={(e)=>{change(e)}} placeholder="enter your email" />
-            <input type="password" name="password" value={user.password || ""} onChange={(e)=>{change(e)}} placeholder="enter password" />
-            <button type="submit" onClick={(e)=>{sub(e)}}>Login</button>
+        <div style={{"width":"50%", "margin":"10% auto", "height":"70rem"}}>
+            <h2>Sign in</h2>
+            {userm.error?<h3 style={{"color":"red"}}>Error</h3>:<></>}
+            {userm.loading ?
+                <div>
+                    {userm.loading?<h3>Loading...</h3>:<></>}
+                </div>
+            :
+                <div>
+                    <div>
+                        <input style={{"padding":"10px", "fontSize":"15px"}} type="text" name="email" value={user.email || ""} onChange={(e)=>{change(e)}} placeholder="enter your email" />
+                    </div>
+                    <div>
+                        <input style={{"padding":"10px", "fontSize":"15px"}} type="password" name="password" value={user.password || ""} onChange={(e)=>{change(e)}} placeholder="enter password" />
+                    </div>
+                    <button style={{"padding":"5px", "margin":"5px", "fontSize":"15px"}} type="submit" onClick={(e)=>{sub(e)}}>Login</button>
+                    <Link to="/user/register">Signup</Link>
+                </div>
+            }
+
         </div>  
     )
 }
