@@ -7,8 +7,10 @@ const Update = () => {
     // const addnewContent = useSelector(state => state.addnewContent);
     const [addc, setAddc] = useState({});
     const [upc, setupc] = useState({});
-    const [l, setl] = useState(user.content[user.content.length - 1].id + 1);
-    const [addUser, setAddUser] = useState([...user.content]);
+    let y = user.content && (user.content[user.content.length - 1].id + 1)
+    const [l, setl] = useState(y);
+    let z = user.content?user.content:[]
+    const [addUser, setAddUser] = useState([...z]);
     const dispatch = useDispatch(); 
     const changeco = (e)=>{
         let ind = e.target.name;
@@ -51,7 +53,7 @@ const Update = () => {
                 </tr>
                 </thead>
                 <tbody>
-                    {user.content.map((v, i)=>(
+                    {user.content && user.content.map((v, i)=>(
                         <tr>
                             <td pd={i}><input name="name" onChange={(e)=>{changeco(e)}} value={ v.name}></input></td>
                             <td pd={i}><input name="contact" onChange={(e)=>{changeco(e)}} value={ v.contact}></input></td>
@@ -73,4 +75,4 @@ const Update = () => {
         
 }
 
-export default Update
+export default Update;
